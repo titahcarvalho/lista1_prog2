@@ -15,7 +15,7 @@ public class Carro {
 	private int portas;
 	private int pneus;
 
-	public Carro (String nome, String modelo, String fabricante, String cor, String farois, String tipoCombustivel, double portaMalas, int ano, int chassi, int placas, int portas, int pneus, int placa ) {
+	public Carro (String nome, String modelo, String fabricante, String cor, String farois, String tipoCombustivel, double portaMalas, int ano, int chassi, int portas, int pneus, int placa ) {
 		
 		this.nome = nome;
 		this.modelo = modelo;
@@ -34,7 +34,7 @@ public class Carro {
 		System.out.println("Chassi:" + this.chassi);
 		}
 	public String toString() {
-		return "Automóvel 1 \n Nome: " + nome + "\nModelo: " + modelo + "\nFabricante:" + fabricante + "\nCor:" + cor + "\nPorta Malas:" + portaMalas + "\n " ;//PAREI AQUI 
+		return "Automóvel 1 \n Nome: " + nome + "\nModelo: " + modelo + "\nFabricante:" + fabricante + "\nCor:" + cor + "\nFarois:" + farois + "\nTipo de combustível:" + tipoCombustivel + "\nPorta Malas:" + portaMalas + "\nAno: " + ano + "\nPlaca:" + placa + "\nPortas:" + portas + "\nPneus:" + pneus ; 
 		
 	}
 	
