@@ -7,10 +7,15 @@ public class Datas {
 	private int ano;
 
 	
-	public Datas(int dia, int mes, int ano) {//com parametros
-		this.dia = dia;
-		this.mes = mes;
-		this.ano = ano;
+	public Datas(int dia, int mes, int ano) {//construtor com parametros
+		if (validarData(dia,mes,ano)) {
+			this.dia = dia;
+			this.mes = mes;
+			this.ano = ano;
+			System.out.println("Data válida.");
+		} else {
+			System.out.println("Data inválida.");
+		}
 		
 	}
 	public Datas() {//sem parametros
@@ -18,6 +23,12 @@ public class Datas {
 		this.dia = dataLocal.getDayOfMonth();
 		this.mes = dataLocal.getMonthValue();
 		this.ano = dataLocal.getYear();
+		
+		if(validarData(this.dia,this.mes,this.ano)) {
+		System.out.println("Data válida");
+		} else {
+			System.out.println("Data Inválida.");
+		}
 	}
 	public int getDia() {
 		return dia;
@@ -36,6 +47,15 @@ public class Datas {
 	}
 	public void setAno(int ano) {
 		this.ano = ano;
+	}
+	public boolean validarData(int dia, int mes, int ano) {
+		boolean dataValida = dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12; 
+			return dataValida;
+			}
+	public void avancarDia(int dias) {
+		for(int diaSeguinte = 0; diaSeguinte < dias; diaSeguinte++) {
+			dia++;
+		}
 	}
 	public String toString () {
 		return String.format("%02d/%02d/%02d", dia, mes, ano);
