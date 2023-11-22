@@ -17,7 +17,7 @@ public class Invoice {
 		if ( precoUnitario > 0) {
 			this.precoUnitario = precoUnitario;
 		} else {
-			this.precoUnitario = 0;
+			this.precoUnitario = 0.0;			//na prova vamos precisar de usar o if p verificar valores
 		}
 				
 	}
@@ -53,11 +53,11 @@ public class Invoice {
 	public void setPrecoUnitario(double precoUnitario) {
 		this.precoUnitario = precoUnitario;
 	}
-	public double getInvoiceAmount () {
+	public double getInvoiceAmount (double total) {
 		if (precoUnitario < 0 || quantidade < 0) {
 			return 0.0;
 		}
-		double total = (this.quantidade * this.precoUnitario);
+		total = (this.quantidade * this.precoUnitario);
 		return total;
 	}
 	

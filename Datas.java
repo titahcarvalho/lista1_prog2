@@ -14,7 +14,7 @@ public class Datas {
 			this.ano = ano;
 			System.out.println("Data válida.");
 		} else {
-			System.out.println("Data inválida.");
+			this.dia =20; this.mes = 11; this.ano = 2023;
 		}
 		
 	}
@@ -27,7 +27,7 @@ public class Datas {
 		if(validarData(this.dia,this.mes,this.ano)) {
 		System.out.println("Data válida");
 		} else {
-			System.out.println("Data Inválida.");
+			this.dia =20; this.mes = 11; this.ano = 2023;
 		}
 	}
 	public int getDia() {
