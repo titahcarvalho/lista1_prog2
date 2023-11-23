@@ -7,7 +7,7 @@ public class Empregados {
 	private int dia,mes,ano;
 	//private Date dataInicio;
 	private double salarioMensal;
-	//private static int n;//para a questão 10; static = tem o mesmo valor para todas as instancias
+	private static int n; //para a questão 10; static = tem o mesmo valor para todas as instancias
 	
 	public Empregados (String primeiroNome, String sobrenome, int dia, int mes , int ano, /*Date dataInicio*/ double salarioMensal) {//int dia, int mes , int ano...
 		
@@ -20,14 +20,17 @@ public class Empregados {
 				this.mes = mes;
 				this.ano = ano;
 			} else {
-				this.dia = 20; this.mes = 11; this.ano=2023;
+				this.dia = 20;
+				this.mes = 11;
+				this.ano = 2023;
 		}
 			}
-		if(this.salarioMensal > 0) {
+		if(salarioMensal > 0) {
 			this.salarioMensal = salarioMensal;
 		} else {
 			this.salarioMensal = 0.0;
 		}
+		n++;
 		//setSalarioMensal(salarioMensal);
 		
 	}
@@ -104,7 +107,7 @@ public class Empregados {
 		double aumento = salarioMensal * 0.1;
 		salarioMensal += aumento;
 	}
-	//public int getTotal() {
-		//return n;
-	//}
+	public int getTotal() {
+		return n;
+	}
 }

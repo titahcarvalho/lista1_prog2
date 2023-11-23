@@ -26,10 +26,10 @@ public class EmpregadoTeste {
 		System.out.println("Salário mensal: R$" + testeEmpregado2.getSalarioMensal());
 		System.out.println("Salário Anual: R$" + testeEmpregado2.salarioAnual());
 		testeEmpregado2.salarioNovoAumento();
-		System.out.println("No salário mensal: R$" + testeEmpregado2.getSalarioMensal());
+		System.out.println("Novo salário mensal: R$" + testeEmpregado2.getSalarioMensal());
 		System.out.println("Reajuste salárial: R$" + testeEmpregado2.salarioAnual());
-		
-		
+		System.out.println("Total de funcionarios: " + testeEmpregado1.getTotal());
+ 		
 		//na prova possa ser que ela peça p criar vários empregados
 
 	}
